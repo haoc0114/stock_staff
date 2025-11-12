@@ -51,7 +51,8 @@ st.write(f"{time_string}")
 
 for i in Symbol_list:
     fig = plot_five_tab(i)
-    st.plotly_chart(fig, use_container_width=True)
+    config_static = {'staticPlot': True}
+    st.plotly_chart(fig, use_container_width=True,config=config_static)
     st.markdown("---") 
 
 # st.success("所有標的物圖表已顯示完成。")
